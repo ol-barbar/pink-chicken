@@ -1,0 +1,109 @@
+// .chat__message-form-wrapper {
+
+// }
+
+.chat__message-form {
+  position: relative;
+}
+
+.chat__message-form-textarea {
+  font-size: 15px;
+  font-weight: 400;
+  color: @basic-grey;
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid @extra-pink;
+  border-radius: 20px;
+  height: 144px;
+  padding-bottom: 60px;
+  padding-top: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  @media (min-width:@tablet-size) {
+    padding-bottom: 78px;
+    padding-top: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @media (min-width:@desktop-size) {
+    border: 2px solid @light-basic-grey;
+  }
+}
+
+.chat__message-form-textarea::placeholder {
+  color: transparent;
+  @media (min-width:@desktop-size) {
+    font-family: Inter, Arial, sans-serif;
+    color: @basic-grey;
+  }
+}
+
+.chat__message-form-attach-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  position: absolute;
+  bottom: 18px;
+  left: 14px;
+  @media (min-width:@tablet-size) {
+    left: 20px;
+    bottom: 20px;
+  }
+}
+
+.chat__message-form-attach {
+  margin: 0;
+}
+
+.chat__message-form-attach-caption {
+  display: block;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  position: relative;
+}
+
+.chat__message-form-attach-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.chat__message-form-button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: @extra-pink;
+  position: absolute;
+  bottom: 10px;
+  right: 14px;
+  cursor: pointer;
+  @media (min-width:@tablet-size) {
+    bottom: 28px;
+  }
+}
+
+.chat__message-form-button-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.chat__message-form-button-text {
+  display: none;
+  @media (min-width:@tablet-size) {
+    display: inline;
+    position: absolute;
+    left: 50%;
+    bottom: -16px;
+    transform: translate(-50%, 0);
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 135%;
+    color: @black;
+
+  }
+}

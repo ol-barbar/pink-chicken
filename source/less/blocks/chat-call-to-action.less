@@ -1,0 +1,39 @@
+.chat__window--empty {
+  .chat__call-to-action {
+    display: block;
+    padding-top: 150px;
+    width: 270px;
+    background-color: transparent;
+    background-image: url('./../img/chat.svg');
+    background-repeat: no-repeat;
+    background-size: 130px;
+    background-position: top 0 left 50%;
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    transform: translate(-50%, 0);
+
+    @media (min-width:@tablet-size) {
+      padding-top: 200px;
+      background-size: 180px;
+      width: 364px;
+    }
+  }
+
+  .chat__call-to-action-text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 145%;
+    text-align: center;
+    color: @black;
+    margin: 0;
+
+    @media (min-width:@tablet-size) {
+      font-size: 16px;
+    }
+  }
+}
+
+.chat__call-to-action {
+  display: none;
+}

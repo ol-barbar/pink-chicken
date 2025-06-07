@@ -1,0 +1,89 @@
+html {
+    height: 100%;
+}
+
+.page-body {
+    min-height: 100vh;
+    /* height: 100%; */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    margin: 0 20px;
+}
+
+.page-header {
+    min-height: 50px;
+    padding: 20px 0;
+    box-sizing: border-box;
+    border: 1px solid red;
+    /* margin: 0; */
+    /* padding: 0; */
+}
+
+.main-content {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 1fr;
+    /* max-height: 100%; */
+    /* flex-grow: 1; */
+    overflow: hidden;
+}
+
+.chats-list {
+    border: 1px solid orange;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+}
+
+.user-chat {
+    border: 1px solid blue;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+}
+
+.chats-list__user-list {
+    list-style: none;
+    padding: 0;
+}
+
+.chats-list__user-item {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    gap: 10px;
+}
+
+/* .user-info { */
+    /* padding: 10px; */
+/* } */
+
+.user-info__user-name {
+    margin: 0;
+}
+
+.user-info__message {
+    margin: 0;
+}
+
+.page-footer {
+    border: 1px solid green;
+    min-height: 100px;
+    padding: 20px 0;
+    box-sizing: border-box;
+    margin-top: auto;
+    /* padding: 0; */
+}

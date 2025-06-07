@@ -1,0 +1,59 @@
+.files-wrapper .files-container--empty {
+  display: block;
+}
+
+.files-container--empty {
+  .files-container__message-wrapper {
+    @media (min-width:@tablet-size) {
+      display: block;
+      position: relative;
+      top: 34px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 522px;
+      height: 304px;
+      box-sizing: border-box;
+      padding-left: 267px;
+      background-image: url('./../img/files.svg');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: 248px;
+    }
+
+    @media (min-width:@desktop-size) {
+      top: 46px;
+      width: 261px;
+      background-size: 256px;
+      padding-left: 0;
+      padding-top: 344px;
+      height: 100%;
+    }
+
+  }
+
+  .files-container__message {
+    @media (min-width:@tablet-size) {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 145%;
+      color: @black;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 267px;
+      transform: translate(0, -50%);
+    }
+
+    @media (min-width:@desktop-size) {
+      left: 50%;
+      top: 344px;
+      transform: translate(-50%, 0);
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
+
+.files-container {
+  display: none;
+}

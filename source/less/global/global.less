@@ -1,0 +1,45 @@
+.page-body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: @white;
+  font-family: Inter, Arial, sans-serif;
+  color: @black;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 100%;
+  @media (min-width:@desktop-size) {
+    background-color: @extra-light-grey;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.wrapper {
+  width: auto;
+  margin: 0 20px;
+  @media (min-width:@tablet-size) {
+    margin: 0 40px;
+  }
+  @media (min-width:@desktop-size) {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+.font-style(@font-size; @line-height; @font-weight) {
+  font-size: @font-size;
+  line-height: @line-height;
+  font-weight: @font-weight;
+}
