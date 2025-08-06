@@ -5,6 +5,5 @@ chatHeaderButton.addEventListener('click', function (evt) {
   evt.preventDefault()
   chatHeaderMenu.classList.toggle('chat__header-menu--close')
   chatHeaderMenu.classList.toggle('chat__header-menu--open')
-
 }
 )

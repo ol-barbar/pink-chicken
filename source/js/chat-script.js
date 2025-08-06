@@ -13,33 +13,6 @@ let presenceOfDate = false
 
 let now = new Date();
 
-const sendMessage = (messageText) => () => {
-  fetch('https://example.com/api/data', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      message: messageText,
-      // timestamp: new Date().toISOString(), // например, добавляем время
-      // senderId: 'user123' // идентификатор пользователя или другая информация
-    })
-
-  })
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Ошибка при отправке сообщения');
-    }
-    return response.json();
-  })
-  .then(data => {
-    console.log('Ответ сервера:', data);
-  })
-  .catch(error => {
-    console.error('Ошибка:', error);
-  });
-}
-
 let getDate = () => {
   if (!presenceOfDate) {
     let chatDate = chatDateTemplate.content.cloneNode(true)
@@ -53,7 +26,6 @@ let getDate = () => {
   }
 }
 
-
 let addedAnswerMessage = () => {
   let answerMessage = chatAdminTemplate.content.cloneNode(true)
   let answerMessageText = answerMessage.querySelector('.chat__message-text')
@@ -66,6 +38,15 @@ let addedAnswerMessage = () => {
   answerMessageText.textContent = adminMessageText
   chatContainer.appendChild(answerMessage)
   chatContainer.scrollTop = chatContainer.scrollHeight
+}
+
+function getAnswerMessage() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const response = addedAnswerMessage();
+      resolve(response);
+    }, 2000);
+  });
 }
 
 let addedMessage = () => {
@@ -85,12 +66,10 @@ let addedMessage = () => {
   chatContainer.appendChild(sendMessage)
   chatContainer.scrollTop = chatContainer.scrollHeight
   if (!presenceOfMessages) {
-    setTimeout(() => {
-      addedAnswerMessage()
-    }, 2000)
+    getAnswerMessage()
     presenceOfMessages = true;
   }
-}
+  }
 }
 
 chatButton.addEventListener('click', function (evt) {
